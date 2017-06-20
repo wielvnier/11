@@ -7,13 +7,12 @@ Button.prototype = {
 		var self = this;
 		this.$element = $('<button>');
 		this.$element.text(this.text);
-		create: this.$element.click(function() {
+		this.$element.click(function() {
 			alert(self.text);
-		});
+		});		
 		$('body').append(this.$element);
 	}
 }
 
 var btn1 = new Button('Hello!');
-
 btn1.create(); 
